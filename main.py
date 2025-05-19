@@ -6,7 +6,7 @@ import re
 import os
 
 API_URL = 'https://www.uscardforum.com/latest.json'
-KEYWORDS_OUTPUT_PATH = 'docs/index.html'
+KEYWORDS_OUTPUT_PATH = 'output/index.html'
 STOPWORDS = {'the', 'a', 'is', 'are', 'to', 'for', 'in', 'of', 'on', 'and', 'with', 'this', 'that'}
 
 def fetch_titles_last_24_hours():
