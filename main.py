@@ -39,7 +39,7 @@ def generate_html(top_keywords):
     html += "</ul><p>最后更新: " + datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC") + "</p>"
     html += "</body></html>"
 
-    os.makedirs('docs', exist_ok=True)
+    os.makedirs('output', exist_ok=True)
     with open(KEYWORDS_OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html)
 
