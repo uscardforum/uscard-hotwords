@@ -6,7 +6,7 @@ import re
 import os
 
 API_URL = 'https://www.uscardforum.com/latest.json'
-KEYWORDS_OUTPUT_PATH = 'output/index.html'
+KEYWORDS_OUTPUT_PATH = 'docs/index.html'
 STOPWORDS = {'the', 'a', 'is', 'are', 'to', 'for', 'in', 'of', 'on', 'and', 'with', 'this', 'that'}
 
 def fetch_titles_last_24_hours():
@@ -39,7 +39,7 @@ def generate_html(top_keywords):
     html += "</ul><p>最后更新: " + datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC") + "</p>"
     html += "</body></html>"
 
-    os.makedirs('output', exist_ok=True)
+    os.makedirs('docs', exist_ok=True)
     with open(KEYWORDS_OUTPUT_PATH, 'w', encoding='utf-8') as f:
         f.write(html)
 
